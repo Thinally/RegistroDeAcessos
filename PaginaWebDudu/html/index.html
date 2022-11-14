@@ -27,15 +27,6 @@
             font-size: 8em;
         }
     </style>
-    <script defer>
-        const Acessos = document.querySelector("#recebe-acessos")
-
-
-
-        fetch('http://188.166.31.66:8080/access').then((x) => x.text()).then((data) => {
-            Acessos.textContent = data
-        })
-    </script>
     <title>Verificação</title>
 </head>
 
@@ -43,6 +34,16 @@
     <h2 id="n-acessos"> Numero de Acessos:</h1>
         </br>
         <h2 id="recebe-acessos"> </h2>
-</body>
+        <script defer>
+            const Acessos = document.querySelector("#recebe-acessos")
+    
+    
+    
+            fetch('http://188.166.31.66:8080/access').then((x) => x.text()).then((data) => {
+                Acessos.textContent = data
+            })
+        </script>
+        </body>
+
 
 </html>
